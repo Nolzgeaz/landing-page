@@ -11,7 +11,6 @@ body {
     background-color: #111; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     display: flex;
-    flex-direction: column; /* Los elementos estarán en una columna */
     justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     height: 100vh;
@@ -19,9 +18,18 @@ body {
     padding: 20px;
 }
 
-/* Sección de texto */
+/* Contenedor principal con regla de tercios */
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Sección de texto - Ocupa un tercio de la pantalla */
 .text {
-    margin-bottom: 20px;
+    flex: 1; /* Ocupa 1 parte del total */
+    padding-right: 20px;
+    margin-right: 20px;
 }
 
 /* Estilos para el título (h1) */
@@ -40,9 +48,10 @@ body {
     margin-bottom: 10px;
 }
 
-/* Enlaces de redes sociales */
+/* Enlaces de redes sociales - Ocupa dos tercios de la pantalla */
 .links {
-    display: grid; /* Usamos grid para crear columnas */
+    flex: 2; /* Ocupa 2 partes del total */
+    display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
     gap: 10px; /* Espacio entre los enlaces */
     width: 100%;
@@ -58,7 +67,7 @@ body {
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s;
     gap: 10px; /* Espacio entre el ícono y el texto */
 }
