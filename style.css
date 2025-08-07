@@ -62,13 +62,13 @@ body {
 .links a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
     background-color: #444; /* Fondo oscuro para los enlaces */
     color: #fff;
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: background-color 0.3s;
     gap: 10px; /* Espacio entre el ícono y el texto */
 }
