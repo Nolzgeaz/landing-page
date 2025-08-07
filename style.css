@@ -1,19 +1,22 @@
+/* Reset básico para todo el contenido */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos para el body */
 body {
-    font-family: 'Montserrat', sans-serif; /* Usamos Montserrat como fuente predeterminada */
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat aplicada a todo el cuerpo */
     background-color: #111; /* Fondo oscuro */
-    color: #fff; /* Texto blanco para un buen contraste */
+    color: #fff; /* Texto blanco */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Estilos para el contenedor principal */
 .container {
     text-align: left;
     background-color: rgba(28, 28, 28, 0.8); /* Fondo de la caja con opacidad */
@@ -24,6 +27,7 @@ body {
     max-width: 400px;
 }
 
+/* Estilos para la imagen de perfil */
 .profile img {
     border-radius: 50%;
     width: 120px;
@@ -33,20 +37,23 @@ body {
     border: 4px solid #fff; /* Borde blanco alrededor de la imagen */
 }
 
+/* Estilos para el título (h1) */
 .profile h1 {
-    font-family: 'Eczar', serif; /* Usamos Eczar para el título */
+    font-family: 'Eczar', serif; /* Fuente Eczar aplicada al título */
     font-size: 2rem;
     margin-bottom: 10px;
     color: #fff; /* Título en blanco */
 }
 
+/* Estilos para los párrafos (p) */
 .profile p {
-    font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para los párrafos */
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat aplicada a los párrafos */
     font-size: 1rem;
-    color: #ddd; /* Texto más suave en los párrafos */
+    color: #ddd; /* Texto suave en los párrafos */
     margin-bottom: 20px;
 }
 
+/* Estilos para los enlaces (links) */
 .links a {
     display: block;
     background-color: #444; /* Fondo oscuro suave para los enlaces */
@@ -62,10 +69,12 @@ body {
     gap: 10px; /* Espacio entre ícono y texto */
 }
 
+/* Estilos para los íconos dentro de los enlaces */
 .links a i {
-    font-size: 1.4rem; /* Tamaño del ícono */
+    font-size: 1.4rem; /* Tamaño de los íconos */
 }
 
+/* Efecto hover para los enlaces */
 .links a:hover {
     background-color: #555; /* Hover más claro */
 }
