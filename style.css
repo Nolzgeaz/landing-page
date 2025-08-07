@@ -51,8 +51,8 @@ body {
 /* Enlaces de redes sociales - Ocupa dos tercios de la pantalla */
 .links {
     flex: 2; /* Ocupa 2 partes del total */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    display: flex;
+    flex-direction: column; /* Asegura que los enlaces se apilen uno debajo del otro */
     gap: 10px; /* Espacio entre los enlaces */
     width: 100%;
 }
@@ -93,7 +93,7 @@ body {
     }
 
     .links {
-        grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+        gap: 5px; /* Menor espacio entre los enlaces en pantallas pequeñas */
     }
 
     .links a {
