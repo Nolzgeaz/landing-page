@@ -11,28 +11,30 @@ body {
     background-color: #111; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     display: flex;
-    justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
+    justify-content: center; /* Centra el contenido en el eje horizontal */
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-/* Contenedor principal con estructura Flexbox */
+/* Contenedor principal con estructura Grid (división en tercios) */
 .content {
-    display: flex;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%); /* Centra el contenido en el eje horizontal */
+    display: grid;
+    grid-template-rows: 33.33% 33.33% 33.33%; /* Divide el contenedor en 3 filas (tercios) */
+    grid-template-columns: 50% 50%; /* Divide el contenedor en 2 columnas */
     width: 80%;
-    justify-content: space-between;
-    align-items: flex-start;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
 }
 
-/* Sección de texto - Ocupa un tercio de la pantalla */
+/* Sección de texto - Ocupa el primer tercio de la pantalla, en la columna 1 */
 .text {
-    flex: 1; /* Ocupa 1 parte del total (un tercio de la pantalla) */
+    grid-row: 1 / 2; /* Primer tercio */
+    grid-column: 1 / 2; /* Columna de la izquierda */
     padding-right: 20px;
     margin-right: 20px;
 }
@@ -53,13 +55,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* Enlaces de redes sociales - Ocupa dos tercios de la pantalla */
+/* Enlaces de redes sociales - Ocupa el segundo tercio de la pantalla, en la columna 2 */
 .links {
-    flex: 2; /* Ocupa 2 partes del total (dos tercios de la pantalla) */
+    grid-row: 2 / 3; /* Segundo tercio */
+    grid-column: 2 / 3; /* Columna de la derecha */
     display: flex;
-    flex-direction: column; /* Asegura que los enlaces se apilen uno debajo del otro */
-    gap: 10px; /* Espacio entre los enlaces */
-    width: 100%;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* Estilos para los enlaces */
