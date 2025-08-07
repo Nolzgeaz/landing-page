@@ -57,6 +57,13 @@ body {
     border-radius: 5px;
     font-size: 1.2rem;
     transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Alinea los íconos con el texto */
+    gap: 10px; /* Espacio entre ícono y texto */
+}
+
+.links a i {
+    font-size: 1.4rem; /* Tamaño del ícono */
 }
 
 .links a:hover {
