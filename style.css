@@ -35,6 +35,9 @@ body {
 .text {
     grid-row: 1 / 2; /* Primer tercio */
     grid-column: 1 / 2; /* Columna de la izquierda */
+    display: flex;
+    flex-direction: column; /* Alineación en columna */
+    justify-content: flex-start; /* Alinea los elementos hacia arriba */
     padding-right: 20px;
     margin-right: 20px;
 }
@@ -57,10 +60,11 @@ body {
 
 /* Enlaces de redes sociales - Ocupa el segundo tercio de la pantalla, en la columna 2 */
 .links {
-    grid-row: 2 / 3; /* Segundo tercio */
+    grid-row: 1 / 2; /* Primer tercio */
     grid-column: 2 / 3; /* Columna de la derecha */
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 10px;
 }
 
