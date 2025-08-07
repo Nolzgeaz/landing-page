@@ -11,21 +11,12 @@ body {
     background-color: #111; /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     display: flex;
+    flex-direction: column; /* Los elementos estarán en una columna */
     justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
-    align-items: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
     height: 100vh;
     margin: 0;
     padding: 20px;
-}
-
-/* Contenedor principal */
-.container {
-    display: flex;
-    flex-direction: column; /* Coloca los elementos uno debajo de otro */
-    align-items: flex-start; /* Alinea todo a la izquierda */
-    justify-content: flex-start; /* Alinea en la parte superior */
-    width: 100%;
-    max-width: 600px; /* Ancho máximo para el contenedor */
 }
 
 /* Sección de texto */
@@ -57,6 +48,7 @@ body {
     width: 100%;
 }
 
+/* Estilos para los enlaces */
 .links a {
     display: flex;
     align-items: center;
