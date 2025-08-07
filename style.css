@@ -18,16 +18,17 @@ body {
     padding: 20px;
 }
 
-/* Contenedor principal con regla de tercios */
+/* Contenedor principal con estructura Flexbox */
 .content {
     display: flex;
     width: 100%;
     max-width: 1200px;
+    justify-content: flex-start;
 }
 
 /* Sección de texto - Ocupa un tercio de la pantalla */
 .text {
-    flex: 1; /* Ocupa 1 parte del total */
+    flex: 1; /* Ocupa 1 parte del total (un tercio de la pantalla) */
     padding-right: 20px;
     margin-right: 20px;
 }
@@ -50,7 +51,7 @@ body {
 
 /* Enlaces de redes sociales - Ocupa dos tercios de la pantalla */
 .links {
-    flex: 2; /* Ocupa 2 partes del total */
+    flex: 2; /* Ocupa 2 partes del total (dos tercios de la pantalla) */
     display: flex;
     flex-direction: column; /* Asegura que los enlaces se apilen uno debajo del otro */
     gap: 10px; /* Espacio entre los enlaces */
