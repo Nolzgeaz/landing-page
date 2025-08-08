@@ -1,114 +1,151 @@
-/* Reset básico para todo el contenido */
+﻿/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos para el body */
+/* Body con fondo oscuro y fuente Montserrat */
 body {
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat aplicada a todo el cuerpo */
-    background-color: #111; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #363636;
+    color: #fff;
     display: flex;
-    justify-content: center; /* Centra el contenido en el eje horizontal */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center;
+    align-items: flex-start;
     height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
-/* Contenedor principal con estructura Grid (división en tercios) */
+/* Contenedor grid */
 .content {
     display: grid;
-    grid-template-rows: 33.33% 33.33% 33.33%; /* Divide el contenedor en 3 filas (tercios) */
-    grid-template-columns: 50% 50%; /* Divide el contenedor en 2 columnas */
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 50% 50%;
     width: 80%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+    transform: translateX(-50%);
 }
 
-/* Sección de texto - Ocupa el primer tercio de la pantalla, en la columna 1 */
+/* Texto en columna izquierda */
 .text {
-    grid-row: 1 / 2; /* Primer tercio */
-    grid-column: 1 / 2; /* Columna de la izquierda */
-    display: flex;
-    flex-direction: column; /* Alineación en columna */
-    justify-content: flex-start; /* Alinea los elementos hacia arriba */
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
     padding-right: 20px;
     margin-right: 20px;
 }
 
-/* Estilos para el título (h1) */
+/* Título */
 .text h1 {
-    font-family: 'Eczar', serif; /* Fuente Eczar para el título */
+    font-family: 'Eczar', serif;
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #fff;
 }
 
-/* Estilos para los párrafos (p) */
+/* Párrafos */
 .text p {
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para los párrafos */
     font-size: 1.1rem;
     color: #ddd;
     margin-bottom: 10px;
 }
 
-/* Enlaces de redes sociales - Ocupa el segundo tercio de la pantalla, en la columna 2 */
-.links {
-    grid-row: 1 / 2; /* Primer tercio */
-    grid-column: 2 / 3; /* Columna de la derecha */
+/* Íconos grandes en blanco puro */
+.social-icons {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-/* Estilos para los enlaces */
+.social-icons a {
+    text-decoration: none;
+    transition: transform 0.3s ease-out; /* Animación agregada */
+}
+
+.social-icons i {
+    font-size: 30px;
+    color: #fff;
+    transition: all 0.3s ease-out; /* Transición mejorada */
+    display: inline-block; /* Necesario para transform */
+}
+
+.social-icons a:hover i {
+    opacity: 0.7;
+    transform: translateY(-3px) scale(1.05); /* Elevación + escala */
+}
+
+/* Botones de enlaces en columna derecha */
+.links {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
 .links a {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
-    background-color: #444; /* Fondo oscuro para los enlaces */
+    justify-content: flex-start;
+    background-color: #444;
     color: #fff;
     text-decoration: none;
-    padding: 15px;
+    padding: 39px;
     border-radius: 5px;
     font-size: 1rem;
-    transition: background-color 0.3s;
-    gap: 10px; /* Espacio entre el ícono y el texto */
+    transition: all 0.3s ease-out; /* Transición mejorada */
+    transform: translateY(0); /* Estado inicial */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra inicial */
+    gap: 10px;
 }
 
-/* Estilo para los íconos de las redes sociales */
 .links a i {
-    font-size: 1.5rem; /* Aumentar el tamaño de los íconos */
+    font-size: 1.5rem;
 }
 
-/* Efecto hover para los enlaces */
 .links a:hover {
-    background-color: #555; /* Cambio de color en hover */
+    background-color: #555;
+    transform: translateY(-5px); /* Elevación al hover */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Sombra más pronunciada */
 }
 
-/* Estilos adicionales para pantallas pequeñas */
+/* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
     .text h1 {
-        font-size: 2rem; /* Título más pequeño en pantallas pequeñas */
+        font-size: 2rem;
     }
 
     .text p {
-        font-size: 1rem; /* Párrafos más pequeños */
+        font-size: 1rem;
     }
 
     .links {
-        gap: 5px; /* Menor espacio entre los enlaces en pantallas pequeñas */
+        gap: 5px;
     }
 
     .links a {
-        font-size: 1rem; /* Texto de los enlaces más pequeño */
+        font-size: 1rem;
         padding: 12px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons i {
+        font-size: 100px;
+    }
+
+    /* Ajustes para móviles */
+    .links a:hover {
+        transform: translateY(-3px); /* Elevación más suave */
+    }
+    
+    .social-icons a:hover i {
+        transform: translateY(-2px) scale(1.03); /* Efecto más sutil */
     }
 }
